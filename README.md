@@ -18,7 +18,6 @@ The base URL for all API endpoints is:
 ### Endpoints
 
 ## 1. GET /students
-```
 **Description**: Retrieves all students from the system.
 
 **Response**:
@@ -42,7 +41,6 @@ Example Response:
     "phoneNumber": "0987654321"
   }
 ]
-```
 
 
 ## 2. `POST /students/addstudent`
