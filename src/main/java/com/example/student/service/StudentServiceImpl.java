@@ -29,11 +29,22 @@ public class StudentServiceImpl implements StudentService {
 		repository.deleteById(id);
 	}
 
+
 	@Override
 	public Student updateStudent(Student student) {
-		return repository.save(student);
+	    return repository.findById(student.getId()) // Fetch existing student by ID
+	        .map(existingStudent -> {
+	        	existingStudent.setId(student.getId());
+	            existingStudent.setName(student.getName()); 
+	            existingStudent.setAge(student.getAge());
+	            existingStudent.setStudentClass(student.getStudentClass());
+	            existingStudent.setPhoneNumber(student.getPhoneNumber());
+	            return repository.save(existingStudent); // Save updated student
+	        })
+	        .orElseThrow(() -> new RuntimeException("Student not found with ID: " + student.getId())); // Handle not found case
 	}
 
+	
 	@Override
 	    public List<Student> searchStudentByName(String name) { return repository.findByNameIgnoreCaseContaining(name); }
 
