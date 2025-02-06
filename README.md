@@ -6,13 +6,13 @@ This API allows you to manage student records. You can add, update, delete, and 
 The base URL for all API endpoints is:  
 `http://localhost:8080/students`
 
-##Technologies Used
-```
+## Technologies Used
+
 - Java
 - Spring Boot
 - Spring Data JPA
 - H2 Database
-```
+
 ---
 
 ### Endpoints
@@ -44,7 +44,6 @@ Example Response:
 
 
 ## 2. `POST /students/addstudent`
-```plaintext
 **Description**: Adds a new student to the system.
 
 **Request Body**:
@@ -67,10 +66,9 @@ Example Response:
   "studentClass": "12th",
   "phoneNumber": "1234567890"
 }
-```
+
 
 ## 3. GET /students/search/{name}
-```
 **Description**: Searches for students by name (case-insensitive).
 
 **Parameters**:
@@ -93,10 +91,10 @@ Example Response:
     "phoneNumber": "1234567890"
   }
 ]
-```
+
 
 ## 4. PUT /students/updatestudent
-```
+
 **Description**: Updates an existing student's details.
 
 **Request Body**:
@@ -120,10 +118,10 @@ Example Response:
   "studentClass": "12th",
   "phoneNumber": "9876543210"
 }
-```
+
 
 ## 5. DELETE /students/{id}
-```
+
 **Description**: Deletes a student by their ID.
 
 **Parameters**:
@@ -136,7 +134,7 @@ DELETE /students/1
 - Status Code: 204 No Content
 - Body: None (student is deleted successfully).
 
-```
+
 
 
 
