@@ -47,20 +47,22 @@ Example Response:
 
 ## 2. `POST /students/addstudent`
 **Description**: Adds a new student to the system.
-```
 **Request Body**:
+```
 {
   "name": "John Doe",
   "age": 20,
   "studentClass": "12th",
   "phoneNumber": "1234567890"
 }
+```
 
 **Response**:
 - Status Code: 201 Created
 - Body: The created student object with assigned `id`.
 
 Example Response:
+```
 {
   "id": 1,
   "name": "John Doe",
@@ -85,6 +87,7 @@ GET /students/search/John
 - Body: A list of students whose names contain the search term.
 
 Example Response:
+```
 [
   {
     "id": 1,
@@ -94,6 +97,7 @@ Example Response:
     "phoneNumber": "1234567890"
   }
 ]
+```
 
 
 ## 4. PUT /students/updatestudent
@@ -101,6 +105,7 @@ Example Response:
 **Description**: Updates an existing student's details.
 
 **Request Body**:
+```
 {
   "id": 1,
   "name": "John Doe",
@@ -108,12 +113,14 @@ Example Response:
   "studentClass": "12th",
   "phoneNumber": "9876543210"
 }
+```
 
 **Response**:
 - Status Code: 200 OK
 - Body: The updated student object.
 
 Example Response:
+```
 {
   "id": 1,
   "name": "John Doe",
@@ -121,6 +128,7 @@ Example Response:
   "studentClass": "12th",
   "phoneNumber": "9876543210"
 }
+```
 
 
 ## 5. DELETE /students/{id}
