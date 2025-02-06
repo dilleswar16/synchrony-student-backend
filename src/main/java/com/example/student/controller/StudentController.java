@@ -3,6 +3,7 @@ package com.example.student.controller;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -22,6 +23,7 @@ import com.example.student.service.StudentService;
 public class StudentController {
 	 @Autowired
 	    private StudentService service;
+	private Student updatedStudent;
 
 	    @PostMapping("/addstudent")
 	    public Student addStudent(@RequestBody Student student) { return service.addStudent(student); }
@@ -37,7 +39,11 @@ public class StudentController {
 	    }
 
 	    @PutMapping("/updatestudent")
-	    public Student updateStudent(@RequestBody Student student) { return service.updateStudent(student); }
+	    public ResponseEntity<Student> updateStudent(@RequestBody Student student) {
+	        Student updatedStudent = service.updateStudent(student);
+	        return ResponseEntity.ok(updatedStudent);
+	    }
+
 
 	    @DeleteMapping("/{id}")
 	    public void deleteStudent(@PathVariable Long id) { service.deleteStudent(id); }
