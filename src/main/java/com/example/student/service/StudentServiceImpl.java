@@ -35,6 +35,6 @@ public class StudentServiceImpl implements StudentService {
 	}
 
 	@Override
-	    public List<Student> searchStudentByName(String name) { return repository.findByName(name); }
+	    public List<Student> searchStudentByName(String name) { return repository.findByNameIgnoreCaseContaining(name); }
 
 }
