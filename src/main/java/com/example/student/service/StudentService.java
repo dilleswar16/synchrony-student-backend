@@ -2,6 +2,8 @@ package com.example.student.service;
 
 import java.util.List;
 
+import org.springframework.http.ResponseEntity;
+
 import com.example.student.entity.Student;
 
 public interface StudentService {
@@ -12,8 +14,8 @@ public interface StudentService {
 
 	void deleteStudent(Long id);
 
-	Student updateStudent(Student student);
-
 	List<Student> searchStudentByName(String name);
+
+	Student updateStudent(Student student);
 
 }
