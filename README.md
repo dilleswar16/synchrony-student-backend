@@ -4,7 +4,9 @@ This API allows you to manage student records. You can add, update, delete, and 
 
 ### Base URL
 The base URL for all API endpoints is:  
-```http://localhost:8080/students```
+```
+http://localhost:8080/students
+```
 
 ## Technologies Used
 ```
