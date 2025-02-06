@@ -9,12 +9,11 @@ http://localhost:8080/students
 ```
 
 ## Technologies Used
-```
 - Java
 - Spring Boot
 - Spring Data JPA
 - H2 Database
-```
+
 ---
 
 ### Endpoints
@@ -25,7 +24,7 @@ http://localhost:8080/students
 **Response**:
 - Status Code: 200 OK
 - Body: A list of all students with their details.
-
+```
 Example Response:
 [
   {
@@ -43,11 +42,12 @@ Example Response:
     "phoneNumber": "0987654321"
   }
 ]
+```
 
 
 ## 2. `POST /students/addstudent`
 **Description**: Adds a new student to the system.
-
+```
 **Request Body**:
 {
   "name": "John Doe",
@@ -68,6 +68,7 @@ Example Response:
   "studentClass": "12th",
   "phoneNumber": "1234567890"
 }
+```
 
 
 ## 3. GET /students/search/{name}
